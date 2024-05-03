@@ -2,6 +2,26 @@
 
 This is a compiler from `.d.ts` to F# bindings for [Fable](https://fable.io/).
 
+## How to use
+first make sure you have the dependencies installed
+```bash
+npm install
+dotnet tool restore
+```
+
+Then you can build the CLI tool with the following command:
+```bash
+dotnet run --project src/Glutinum.Build/Glutinum.Build.fsproj cli
+```
+
+Then you can run the CLI with the following command:
+```bash
+node cli.js "path\lib\index.d.ts" --out-file "lib.d.ts.fs"
+```
+
+see https://github.com/glutinum-org/cli/issues/41#issuecomment-1925806879
+
+
 ## Contributing
 
 Glutinum.CLI use `./build.sh` or `./build.bat` as a build script.
